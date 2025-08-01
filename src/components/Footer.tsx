@@ -42,7 +42,10 @@ const Footer = () => {
                 'WhatsApp Integration',
                 'Business Automation',
                 'Self-hosted Solutions',
-                'Security & Authentication'
+                'Security & Authentication',
+                'Live Dashboard',
+                'Custom Websites',
+                'Link Trackers'
               ].map((service) => (
                 <li key={service}>
                   <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
@@ -61,9 +64,9 @@ const Footer = () => {
                 <Mail className="w-4 h-4 mr-2" />
                 info@sa3fa.com
               </a>
-              <a href="https://wa.me/+964780136549" className="flex items-center text-muted-foreground hover:text-success transition-colors text-sm">
+              <a href="https://wa.me/+9647801365149" className="flex items-center text-muted-foreground hover:text-success transition-colors text-sm">
                 <MessageSquare className="w-4 h-4 mr-2" />
-                +964 780 136 549
+                +964 780 136 5149
               </a>
               <div className="flex items-center text-muted-foreground text-sm">
                 <MapPin className="w-4 h-4 mr-2" />

@@ -66,6 +66,9 @@ const Contact = () => {
                   <option value="automation">Business Automation</option>
                   <option value="hosting">Self-hosted Solutions</option>
                   <option value="security">Security & Auth</option>
+                  <option value="live-dashboard">Live Dashboard</option>
+                  <option value="custom-websites">Custom Websites</option>
+                  <option value="link-trackers">Link Trackers</option>
                 </select>
               </div>
               
@@ -107,11 +110,11 @@ const Contact = () => {
                   <ArrowRight className="ml-auto w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
                 
-                <a href="https://wa.me/+964780136549" className="flex items-center p-4 rounded-lg bg-success/10 border border-success/30 text-success hover:bg-success/20 transition-colors group">
+                <a href="https://wa.me/+9647801365149" className="flex items-center p-4 rounded-lg bg-success/10 border border-success/30 text-success hover:bg-success/20 transition-colors group">
                   <MessageSquare className="w-5 h-5 mr-4" />
                   <div>
                     <div className="font-medium">WhatsApp</div>
-                    <div className="text-sm opacity-80">+964 780 136 549</div>
+                    <div className="text-sm opacity-80">+964 780 136 5149</div>
                   </div>
                   <ArrowRight className="ml-auto w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
