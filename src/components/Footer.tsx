@@ -57,17 +57,17 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-foreground">Contact</h3>
             <div className="space-y-3">
-              <a href="mailto:hello@sa3fa.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors text-sm">
+              <a href="mailto:info@sa3fa.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors text-sm">
                 <Mail className="w-4 h-4 mr-2" />
-                hello@sa3fa.com
+                info@sa3fa.com
               </a>
-              <a href="https://wa.me/+966123456789" className="flex items-center text-muted-foreground hover:text-success transition-colors text-sm">
+              <a href="https://wa.me/+964780136549" className="flex items-center text-muted-foreground hover:text-success transition-colors text-sm">
                 <MessageSquare className="w-4 h-4 mr-2" />
-                +966 12 345 6789
+                +964 780 136 549
               </a>
               <div className="flex items-center text-muted-foreground text-sm">
                 <MapPin className="w-4 h-4 mr-2" />
-                Middle East Region
+                Iraq - Baghdad
               </div>
             </div>
           </div>

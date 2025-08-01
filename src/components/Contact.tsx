@@ -90,20 +90,20 @@ const Contact = () => {
               </h3>
               
               <div className="space-y-4">
-                <a href="mailto:hello@sa3fa.com" className="flex items-center p-4 rounded-lg bg-primary/10 border border-primary/30 text-primary hover:bg-primary/20 transition-colors group">
+                <a href="mailto:info@sa3fa.com" className="flex items-center p-4 rounded-lg bg-primary/10 border border-primary/30 text-primary hover:bg-primary/20 transition-colors group">
                   <Mail className="w-5 h-5 mr-4" />
                   <div>
                     <div className="font-medium">Email Us</div>
-                    <div className="text-sm opacity-80">hello@sa3fa.com</div>
+                    <div className="text-sm opacity-80">info@sa3fa.com</div>
                   </div>
                   <ArrowRight className="ml-auto w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
                 
-                <a href="https://wa.me/+966123456789" className="flex items-center p-4 rounded-lg bg-success/10 border border-success/30 text-success hover:bg-success/20 transition-colors group">
+                <a href="https://wa.me/+964780136549" className="flex items-center p-4 rounded-lg bg-success/10 border border-success/30 text-success hover:bg-success/20 transition-colors group">
                   <MessageSquare className="w-5 h-5 mr-4" />
                   <div>
                     <div className="font-medium">WhatsApp</div>
-                    <div className="text-sm opacity-80">+966 12 345 6789</div>
+                    <div className="text-sm opacity-80">+964 780 136 549</div>
                   </div>
                   <ArrowRight className="ml-auto w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
@@ -112,7 +112,7 @@ const Contact = () => {
                   <MapPin className="w-5 h-5 mr-4" />
                   <div>
                     <div className="font-medium">Based in</div>
-                    <div className="text-sm opacity-80">Middle East Region</div>
+                    <div className="text-sm opacity-80">Iraq - Baghdad</div>
                   </div>
                 </div>
               </div>
