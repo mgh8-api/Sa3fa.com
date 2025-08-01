@@ -85,7 +85,7 @@ const Hero = () => {
 
           {/* Tech stack indicators */}
           <div className="mt-16 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-            {['Docker', 'Node.js', 'PostgreSQL', 'Traefik', 'n8n', 'WhatsApp API'].map((tech) => (
+            {['Docker', 'Node.js', 'PostgreSQL', 'Traefik', 'Automation', 'WhatsApp API'].map((tech) => (
               <span key={tech} className="glass-card px-4 py-2 tech-border">
                 {tech}
               </span>

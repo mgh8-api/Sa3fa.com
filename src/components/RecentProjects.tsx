@@ -13,7 +13,7 @@ const projects = [
   {
     title: 'Business Intelligence Dashboard',
     description: 'Custom analytics platform aggregating data from multiple sources with real-time visualizations.',
-    tech: ['React', 'n8n', 'PostgreSQL', 'Traefik'],
+    tech: ['React', 'Automation', 'PostgreSQL', 'Traefik'],
     features: ['Multi-source Data', 'Real-time Analytics', 'Custom Reports'],
     status: 'Live',
     impact: '50% faster decision making'

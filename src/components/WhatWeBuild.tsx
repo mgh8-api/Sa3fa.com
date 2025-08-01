@@ -1,4 +1,4 @@
-import { Monitor, MessageSquare, Zap, Server, Shield, BarChart3 } from 'lucide-react';
+import { Monitor, MessageSquare, Zap, Server, Shield, BarChart3, LayoutDashboard, Globe, Link2 } from 'lucide-react';
 import dashboardVisual from '@/assets/dashboard-visual.jpg';
 import automationVisual from '@/assets/automation-visual.jpg';
 
@@ -32,6 +32,27 @@ const services = [
     features: ['Process Automation', 'Business Intelligence', 'Growth Analytics'],
     color: 'warning',
     image: automationVisual
+  },
+  {
+    icon: LayoutDashboard,
+    title: 'Live Dashboard',
+    description: 'Track key metrics in real time with personalized dashboards and instant alerts.',
+    features: ['Real-time Monitoring', 'Custom Metrics', 'Notifications'],
+    color: 'accent'
+  },
+  {
+    icon: Globe,
+    title: 'Custom Websites',
+    description: 'Bespoke websites tailored to your brand with modern design and SEO best practices.',
+    features: ['Responsive Design', 'SEO Ready', 'CMS Integration'],
+    color: 'primary'
+  },
+  {
+    icon: Link2,
+    title: 'Link Trackers',
+    description: 'Shorten, track, and analyze links to optimize your marketing campaigns.',
+    features: ['URL Shortening', 'Analytics', 'QR Codes'],
+    color: 'success'
   },
   {
     icon: Server,
