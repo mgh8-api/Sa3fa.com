@@ -1,0 +1,95 @@
+import { Mail, MessageSquare, MapPin, Zap, Github, Linkedin, Twitter } from 'lucide-react';
+
+const Footer = () => {
+  return (
+    <footer className="bg-background/50 backdrop-blur-lg border-t border-border/50 py-16">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Brand */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-2 mb-6">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                <Zap className="w-6 h-6 text-primary-foreground" />
+              </div>
+              <span className="text-2xl font-bold glow-text">Sa3fa</span>
+            </div>
+            
+            <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
+              Building the future of business technology. We create smart systems that help 
+              companies grow, automate, and scale in the digital age.
+            </p>
+            
+            <div className="flex space-x-4">
+              <a href="#" className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-primary hover:bg-primary/20 transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-primary hover:bg-primary/20 transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-primary hover:bg-primary/20 transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-foreground">Services</h3>
+            <ul className="space-y-3">
+              {[
+                'Custom SaaS Development',
+                'Business Dashboards',
+                'WhatsApp Integration',
+                'Business Automation',
+                'Self-hosted Solutions',
+                'Security & Authentication'
+              ].map((service) => (
+                <li key={service}>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    {service}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-foreground">Contact</h3>
+            <div className="space-y-3">
+              <a href="mailto:hello@sa3fa.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors text-sm">
+                <Mail className="w-4 h-4 mr-2" />
+                hello@sa3fa.com
+              </a>
+              <a href="https://wa.me/+966123456789" className="flex items-center text-muted-foreground hover:text-success transition-colors text-sm">
+                <MessageSquare className="w-4 h-4 mr-2" />
+                +966 12 345 6789
+              </a>
+              <div className="flex items-center text-muted-foreground text-sm">
+                <MapPin className="w-4 h-4 mr-2" />
+                Middle East Region
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <div className="border-t border-border/50 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-muted-foreground text-sm">
+            © 2024 Sa3fa. All rights reserved. Built with passion for innovation.
+          </p>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+              Terms of Service
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
