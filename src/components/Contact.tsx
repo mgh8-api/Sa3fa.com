@@ -74,7 +74,15 @@ const Contact = () => {
                 className="bg-input/50 border-border/50 focus:border-primary/50 focus:ring-primary/20 min-h-32"
               />
               
-              <Button size="lg" className="w-full glass-button text-lg py-4 group">
+              <Button 
+                size="lg" 
+                className="w-full glass-button text-lg py-4 group"
+                onClick={(e) => {
+                  e.preventDefault();
+                  // Handle form submission here
+                  console.log('Form submitted');
+                }}
+              >
                 Start Building
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>
@@ -126,7 +134,11 @@ const Contact = () => {
               <p className="text-muted-foreground mb-6">
                 Book a 30-minute consultation to discuss your project requirements and get expert advice.
               </p>
-              <Button variant="outline" className="w-full tech-border group">
+              <Button 
+                variant="outline" 
+                className="w-full tech-border group"
+                onClick={() => window.open('https://calendly.com/sa3fa', '_blank')}
+              >
                 <Calendar className="w-4 h-4 mr-2" />
                 Schedule Call
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />

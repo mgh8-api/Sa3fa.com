@@ -51,7 +51,10 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="glass-button">
+            <Button 
+              className="glass-button"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Start Building
             </Button>
           </div>
@@ -79,7 +82,13 @@ const Navigation = () => {
                   {item.label}
                 </a>
               ))}
-              <Button className="glass-button mt-4">
+              <Button 
+                className="glass-button mt-4"
+                onClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  setIsOpen(false);
+                }}
+              >
                 Start Building
               </Button>
             </div>

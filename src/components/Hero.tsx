@@ -65,11 +65,20 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="glass-button text-lg px-8 py-4 group">
+            <Button 
+              size="lg" 
+              className="glass-button text-lg px-8 py-4 group"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Start Building
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="outline" size="lg" className="tech-border text-lg px-8 py-4 bg-transparent hover:bg-primary/10">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="tech-border text-lg px-8 py-4 bg-transparent hover:bg-primary/10"
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               View Our Work
             </Button>
           </div>
