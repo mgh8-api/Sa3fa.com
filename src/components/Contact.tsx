@@ -69,7 +69,7 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="glass-card p-8 tech-border scroll-reveal">
+          <div className="glass-card p-8 tech-border scroll-reveal pointer-events-auto" onClick={() => console.log('Form container clicked')}>
             <h3 className="text-2xl font-bold mb-6 text-foreground">
               Get Started Today
             </h3>
