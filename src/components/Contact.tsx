@@ -2,8 +2,51 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { MessageSquare, Mail, Phone, MapPin, Calendar, ArrowRight } from 'lucide-react';
+import { useForm } from 'react-hook-form';
+import { useToast } from '@/hooks/use-toast';
+import { useState } from 'react';
+
+interface FormData {
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  projectType: string;
+  message: string;
+}
 
 const Contact = () => {
+  const { register, handleSubmit, reset, formState: { isSubmitting } } = useForm<FormData>();
+  const { toast } = useToast();
+
+  const onSubmit = async (data: FormData) => {
+    try {
+      const response = await fetch('https://process.sa3fa.com/webhook/8e3cafd2-998b-4654-becb-4e784e29ed4f', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "We'll get back to you within 2 hours.",
+        });
+        reset(); // Clear the form
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    }
+  };
+
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background glow effects */}
@@ -31,16 +74,18 @@ const Contact = () => {
               Get Started Today
             </h3>
             
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <Input 
+                    {...register('name', { required: true })}
                     placeholder="Your Name" 
                     className="bg-input/50 border-border/50 focus:border-primary/50 focus:ring-primary/20"
                   />
                 </div>
                 <div>
                   <Input 
+                    {...register('email', { required: true })}
                     type="email" 
                     placeholder="Email Address" 
                     className="bg-input/50 border-border/50 focus:border-primary/50 focus:ring-primary/20"
@@ -49,16 +94,21 @@ const Contact = () => {
               </div>
               
               <Input 
+                {...register('company')}
                 placeholder="Company Name (Optional)" 
                 className="bg-input/50 border-border/50 focus:border-primary/50 focus:ring-primary/20"
               />
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Input 
+                  {...register('phone')}
                   placeholder="Phone Number" 
                   className="bg-input/50 border-border/50 focus:border-primary/50 focus:ring-primary/20"
                 />
-                <select className="w-full px-3 py-2 bg-input/50 border border-border/50 rounded-md focus:border-primary/50 focus:ring-primary/20 text-foreground">
+                <select 
+                  {...register('projectType')}
+                  className="w-full px-3 py-2 bg-input/50 border border-border/50 rounded-md focus:border-primary/50 focus:ring-primary/20 text-foreground"
+                >
                   <option value="">Project Type</option>
                   <option value="saas">Custom SaaS Development</option>
                   <option value="dashboard">Business Dashboard</option>
@@ -73,20 +123,18 @@ const Contact = () => {
               </div>
               
               <Textarea 
+                {...register('message')}
                 placeholder="Tell us about your project, goals, and timeline..."
                 className="bg-input/50 border-border/50 focus:border-primary/50 focus:ring-primary/20 min-h-32"
               />
               
               <Button 
+                type="submit"
                 size="lg" 
                 className="w-full glass-button text-lg py-4 group"
-                onClick={(e) => {
-                  e.preventDefault();
-                  // Handle form submission here
-                  console.log('Form submitted');
-                }}
+                disabled={isSubmitting}
               >
-                Start Building
+                {isSubmitting ? 'Sending...' : 'Start Building'}
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </form>
