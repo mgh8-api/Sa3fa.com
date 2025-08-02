@@ -1,72 +1,47 @@
-import { Monitor, MessageSquare, Zap, Server, Shield, BarChart3, LayoutDashboard, Globe, Link2 } from 'lucide-react';
-import dashboardVisual from '@/assets/dashboard-visual.jpg';
-import automationVisual from '@/assets/automation-visual.jpg';
+import { Server, Link2, Zap, Database, Settings, Monitor } from 'lucide-react';
 
 const services = [
   {
-    icon: Monitor,
-    title: 'Custom SaaS Development',
-    description: 'From idea to MVP to scalable product. We build complete SaaS solutions that grow with your business.',
-    features: ['MVP Development', 'Scalable Architecture', 'Modern Tech Stack'],
-    color: 'primary'
-  },
-  {
-    icon: BarChart3,
-    title: 'Business Dashboards',
-    description: 'Transform raw data into actionable insights with powerful visual dashboards.',
-    features: ['Real-time Analytics', 'Custom Visualizations', 'Performance Metrics'],
-    color: 'accent',
-    image: dashboardVisual
-  },
-  {
-    icon: MessageSquare,
-    title: 'WhatsApp & API Integration',
-    description: 'Connect any platform directly to WhatsApp and automate customer interactions.',
-    features: ['WhatsApp Business API', 'Multi-platform Integration', 'Automated Workflows'],
-    color: 'success'
-  },
-  {
-    icon: Zap,
-    title: 'Automation & Business Tools',
-    description: 'We build growth engines, not just software. Automate processes that scale your business.',
-    features: ['Process Automation', 'Business Intelligence', 'Growth Analytics'],
-    color: 'warning',
-    image: automationVisual
-  },
-  {
-    icon: LayoutDashboard,
-    title: 'Live Dashboard',
-    description: 'Track key metrics in real time with personalized dashboards and instant alerts.',
-    features: ['Real-time Monitoring', 'Custom Metrics', 'Notifications'],
-    color: 'accent'
-  },
-  {
-    icon: Globe,
-    title: 'Custom Websites',
-    description: 'Bespoke websites tailored to your brand with modern design and SEO best practices.',
-    features: ['Responsive Design', 'SEO Ready', 'CMS Integration'],
+    icon: Server,
+    title: 'Server Setup & Management',
+    description: 'Professional server configuration and ongoing management for optimal performance and security.',
+    features: ['Server Configuration', 'Performance Monitoring', 'Security Hardening'],
     color: 'primary'
   },
   {
     icon: Link2,
-    title: 'Link Trackers',
-    description: 'Shorten, track, and analyze links to optimize your marketing campaigns.',
-    features: ['URL Shortening', 'Analytics', 'QR Codes'],
+    title: 'Custom API Integration',
+    description: 'Seamlessly connect your systems with custom API integrations and third-party services.',
+    features: ['API Development', 'Third-party Integration', 'Data Synchronization'],
+    color: 'accent'
+  },
+  {
+    icon: Settings,
+    title: 'Node.js',
+    description: 'High-performance backend development using Node.js for scalable server-side applications.',
+    features: ['Backend Development', 'RESTful APIs', 'Real-time Applications'],
     color: 'success'
   },
   {
-    icon: Server,
-    title: 'Self-hosted Solutions',
-    description: 'Complete hosting infrastructure with domains, reverse proxies, and Docker deployments.',
-    features: ['Traefik Proxy', 'Docker Containers', 'Server Management'],
-    color: 'primary'
+    icon: Database,
+    title: 'PostgreSQL',
+    description: 'Robust database design and optimization using PostgreSQL for reliable data management.',
+    features: ['Database Design', 'Query Optimization', 'Data Migration'],
+    color: 'warning'
   },
   {
-    icon: Shield,
-    title: 'Security & Authentication',
-    description: 'Enterprise-grade security with advanced authentication systems and secure email services.',
-    features: ['Authelia Integration', 'Mailcow Setup', 'Security Layers'],
+    icon: Zap,
+    title: 'Automation',
+    description: 'Streamline your business processes with intelligent automation solutions.',
+    features: ['Process Automation', 'Workflow Optimization', 'Task Scheduling'],
     color: 'accent'
+  },
+  {
+    icon: Monitor,
+    title: 'Custom SaaS',
+    description: 'Complete SaaS platform development from concept to deployment and scaling.',
+    features: ['SaaS Architecture', 'Multi-tenancy', 'Subscription Management'],
+    color: 'primary'
   }
 ];
 
@@ -102,15 +77,6 @@ const WhatWeBuild = () => {
                 className="glass-card p-8 tech-border group hover:scale-105 transition-all duration-300 scroll-reveal"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {service.image && (
-                  <div className="mb-6 rounded-lg overflow-hidden">
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-32 object-cover opacity-80 group-hover:opacity-100 transition-opacity"
-                    />
-                  </div>
-                )}
                 
                 <div className={`inline-flex p-4 rounded-lg border ${colorClass} mb-6`}>
                   <Icon className="w-8 h-8" />
