@@ -6,27 +6,27 @@ const projects = [
   {
     id: 'ecommerce-automation',
     title: 'E-commerce Automation Platform',
-    description: 'Complete tailored SaaS solution with store API integration, web scraping for auditing, inventory management, and automated customer service with WhatsApp integration.',
+    description: 'Comprehensive SaaS solution featuring seamless store API integration, intelligent web scraping for competitive auditing, advanced inventory management, and automated customer service through WhatsApp integration.',
     tech: ['Node.js', 'PostgreSQL', 'WhatsApp API', 'Web Scraping'],
-    features: ['Store API Integration', 'Web Scraping Auditing', 'Inventory Management'],
+    features: ['Store API Integration', 'Competitive Auditing', 'Inventory Management'],
     status: 'Live',
     impact: '300% increase in order processing speed'
   },
   {
     id: 'business-intelligence',
     title: 'Business Intelligence Dashboard',
-    description: 'API integration with web scraping from 3 vendors who don\'t support API, unified database with WhatsApp automation, live dashboard tracking, and custom AI for end user questioning and querying.',
+    description: 'Advanced analytics platform with multi-vendor API integration, intelligent web scraping for non-API vendors, unified database architecture, WhatsApp automation, real-time dashboard monitoring, and custom AI for natural language querying.',
     tech: ['React', 'PostgreSQL', 'WhatsApp API', 'Custom AI'],
-    features: ['Multi-vendor Integration', 'Live Dashboard', 'Custom AI Querying'],
+    features: ['Multi-vendor Integration', 'Real-time Analytics', 'AI-Powered Queries'],
     status: 'Live',
     impact: '50% faster decision making'
   },
   {
     id: 'hospital-management',
-    title: 'Hospital Management Custom SaaS',
-    description: 'Custom software to manage hospital human resources and assets efficiently, ending paper transactions altogether and providing a full computerized solution.',
+    title: 'Hospital Management SaaS',
+    description: 'Enterprise-grade healthcare management system designed to optimize hospital operations, streamline human resource management, and digitize asset tracking while eliminating paper-based processes through comprehensive computerization.',
     tech: ['Node.js', 'PostgreSQL', 'Custom SaaS', 'Automation'],
-    features: ['HR Management', 'Asset Tracking', 'Paperless Workflow'],
+    features: ['HR Management', 'Asset Tracking', 'Digital Workflow'],
     status: 'Deployed',
     impact: '100% digital transformation achieved'
   }
