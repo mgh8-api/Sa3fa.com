@@ -1,46 +1,37 @@
 import { ExternalLink, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
-
-const projects = [
-  {
-    id: 'ecommerce-automation',
-    title: 'E-commerce Automation Platform',
-    description: 'Comprehensive SaaS solution featuring seamless store API integration, intelligent web scraping for competitive auditing, advanced inventory management, and automated customer service through WhatsApp integration.',
-    tech: ['Node.js', 'PostgreSQL', 'WhatsApp API', 'Web Scraping'],
-    features: ['Store API Integration', 'Competitive Auditing', 'Inventory Management'],
-    status: 'Live',
-    impact: '300% increase in order processing speed'
-  },
-  {
-    id: 'business-intelligence',
-    title: 'Business Intelligence Dashboard',
-    description: 'Advanced analytics platform with multi-vendor API integration, intelligent web scraping for non-API vendors, unified database architecture, WhatsApp automation, real-time dashboard monitoring, and custom AI for natural language querying.',
-    tech: ['React', 'PostgreSQL', 'WhatsApp API', 'Custom AI'],
-    features: ['Multi-vendor Integration', 'Real-time Analytics', 'AI-Powered Queries'],
-    status: 'Live',
-    impact: '50% faster decision making'
-  },
-  {
-    id: 'hospital-management',
-    title: 'Hospital Management SaaS',
-    description: 'Enterprise-grade healthcare management system designed to optimize hospital operations, streamline human resource management, and digitize asset tracking while eliminating paper-based processes through comprehensive computerization.',
-    tech: ['Node.js', 'PostgreSQL', 'Custom SaaS', 'Automation'],
-    features: ['HR Management', 'Asset Tracking', 'Digital Workflow'],
-    status: 'Deployed',
-    impact: '100% digital transformation achieved'
-  }
-];
-
+const projects = [{
+  id: 'ecommerce-automation',
+  title: 'E-commerce Automation Platform',
+  description: 'Comprehensive SaaS solution featuring seamless store API integration, intelligent web scraping for competitive auditing, advanced inventory management, and automated customer service through WhatsApp integration.',
+  tech: ['Node.js', 'PostgreSQL', 'WhatsApp API', 'Web Scraping'],
+  features: ['Store API Integration', 'Competitive Auditing', 'Inventory Management'],
+  status: 'Live',
+  impact: '300% increase in order processing speed'
+}, {
+  id: 'business-intelligence',
+  title: 'Business Intelligence Dashboard',
+  description: 'Advanced analytics platform with multi-vendor API integration, intelligent web scraping for non-API vendors, unified database architecture, WhatsApp automation, real-time dashboard monitoring, and custom AI for natural language querying.',
+  tech: ['React', 'PostgreSQL', 'WhatsApp API', 'Custom AI'],
+  features: ['Multi-vendor Integration', 'Real-time Analytics', 'AI-Powered Queries'],
+  status: 'Live',
+  impact: '50% faster decision making'
+}, {
+  id: 'hospital-management',
+  title: 'Hospital Management SaaS',
+  description: 'Enterprise-grade healthcare management system designed to optimize hospital operations, streamline human resource management, and digitize asset tracking while eliminating paper-based processes through comprehensive computerization.',
+  tech: ['Node.js', 'PostgreSQL', 'Custom SaaS', 'Automation'],
+  features: ['HR Management', 'Asset Tracking', 'Digital Workflow'],
+  status: 'Deployed',
+  impact: '100% digital transformation achieved'
+}];
 const RecentProjects = () => {
   const navigate = useNavigate();
-
   const handleViewDetails = (projectId: string) => {
     navigate(`/projects/${projectId}`);
   };
-
-  return (
-    <section className="py-24 relative">
+  return <section className="py-24 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 scroll-reveal">
           <h2 className="text-5xl font-bold mb-6">
@@ -53,12 +44,9 @@ const RecentProjects = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={project.title}
-              className="glass-card p-8 tech-border group hover:scale-105 transition-all duration-300 scroll-reveal"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
+          {projects.map((project, index) => <div key={project.title} className="glass-card p-8 tech-border group hover:scale-105 transition-all duration-300 scroll-reveal" style={{
+          animationDelay: `${index * 0.1}s`
+        }}>
               {/* Status badge */}
               <div className="flex justify-between items-start mb-6">
                 <div className="flex items-center gap-2">
@@ -79,26 +67,19 @@ const RecentProjects = () => {
               {/* Tech stack */}
               <div className="mb-6">
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30"
-                    >
+                  {project.tech.map(tech => <span key={tech} className="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30">
                       {tech}
-                    </span>
-                  ))}
+                    </span>)}
                 </div>
               </div>
 
               {/* Features */}
               <div className="mb-6">
                 <ul className="space-y-2">
-                  {project.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-sm text-muted-foreground">
+                  {project.features.map(feature => <li key={feature} className="flex items-center text-sm text-muted-foreground">
                       <div className="w-2 h-2 rounded-full bg-accent mr-3" />
                       {feature}
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
 
@@ -111,28 +92,16 @@ const RecentProjects = () => {
 
               {/* Actions */}
               <div className="flex gap-3">
-                <Button 
-                  size="sm" 
-                  variant="outline" 
-                  className="flex-1 tech-border"
-                  onClick={() => handleViewDetails(project.id)}
-                >
+                <Button size="sm" variant="outline" className="flex-1 tech-border" onClick={() => handleViewDetails(project.id)}>
                   <ExternalLink className="w-4 h-4 mr-2" />
                   View Details
                 </Button>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
 
-        <div className="text-center mt-12 scroll-reveal">
-          <Button size="lg" className="glass-button">
-            View All Projects
-          </Button>
-        </div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default RecentProjects;
