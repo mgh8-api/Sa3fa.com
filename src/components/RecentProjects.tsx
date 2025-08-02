@@ -1,34 +1,44 @@
-import { ExternalLink, Github, Zap } from 'lucide-react';
+import { ExternalLink, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const projects = [
   {
+    id: 'ecommerce-automation',
     title: 'E-commerce Automation Platform',
-    description: 'Complete SaaS solution with WhatsApp integration, inventory management, and automated customer service.',
-    tech: ['Node.js', 'PostgreSQL', 'WhatsApp API', 'Docker'],
-    features: ['Real-time Inventory', 'Automated Orders', 'Customer Support'],
+    description: 'Complete tailored SaaS solution with store API integration, web scraping for auditing, inventory management, and automated customer service with WhatsApp integration.',
+    tech: ['Node.js', 'PostgreSQL', 'WhatsApp API', 'Web Scraping'],
+    features: ['Store API Integration', 'Web Scraping Auditing', 'Inventory Management'],
     status: 'Live',
     impact: '300% increase in order processing speed'
   },
   {
+    id: 'business-intelligence',
     title: 'Business Intelligence Dashboard',
-    description: 'Custom analytics platform aggregating data from multiple sources with real-time visualizations.',
-    tech: ['React', 'Automation', 'PostgreSQL', 'Traefik'],
-    features: ['Multi-source Data', 'Real-time Analytics', 'Custom Reports'],
+    description: 'API integration with web scraping from 3 vendors who don\'t support API, unified database with WhatsApp automation, live dashboard tracking, and custom AI for end user questioning and querying.',
+    tech: ['React', 'PostgreSQL', 'WhatsApp API', 'Custom AI'],
+    features: ['Multi-vendor Integration', 'Live Dashboard', 'Custom AI Querying'],
     status: 'Live',
     impact: '50% faster decision making'
   },
   {
-    title: 'Self-hosted Communication Suite',
-    description: 'Complete communication infrastructure with secure email, authentication, and file sharing.',
-    tech: ['Mailcow', 'Authelia', 'Docker', 'Traefik'],
-    features: ['Secure Email', 'SSO Authentication', 'File Management'],
+    id: 'hospital-management',
+    title: 'Hospital Management Custom SaaS',
+    description: 'Custom software to manage hospital human resources and assets efficiently, ending paper transactions altogether and providing a full computerized solution.',
+    tech: ['Node.js', 'PostgreSQL', 'Custom SaaS', 'Automation'],
+    features: ['HR Management', 'Asset Tracking', 'Paperless Workflow'],
     status: 'Deployed',
-    impact: '100% data ownership & control'
+    impact: '100% digital transformation achieved'
   }
 ];
 
 const RecentProjects = () => {
+  const navigate = useNavigate();
+
+  const handleViewDetails = (projectId: string) => {
+    navigate(`/projects/${projectId}`);
+  };
+
   return (
     <section className="py-24 relative">
       <div className="container mx-auto px-6">
@@ -101,12 +111,14 @@ const RecentProjects = () => {
 
               {/* Actions */}
               <div className="flex gap-3">
-                <Button size="sm" variant="outline" className="flex-1 tech-border">
+                <Button 
+                  size="sm" 
+                  variant="outline" 
+                  className="flex-1 tech-border"
+                  onClick={() => handleViewDetails(project.id)}
+                >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   View Details
-                </Button>
-                <Button size="sm" variant="outline" className="tech-border">
-                  <Github className="w-4 h-4" />
                 </Button>
               </div>
             </div>
