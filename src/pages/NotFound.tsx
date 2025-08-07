@@ -19,7 +19,7 @@ const NotFound = () => {
           <img 
             src="/this-is-fine.gif" 
             alt="This is fine meme" 
-            className="w-48 h-48 mx-auto mb-6 rounded-lg"
+            className="max-w-xs mx-auto mb-6 rounded-lg"
           />
         </div>
         
