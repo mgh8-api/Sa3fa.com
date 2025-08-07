@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ExternalLink, Calendar, Users, Target, CheckCircle } from 'lucide-react';
 import Navigation from '@/components/Navigation';
@@ -110,6 +111,10 @@ const ProjectDetail = () => {
   const { projectId } = useParams();
   const navigate = useNavigate();
   const project = projectId ? projectsData[projectId as keyof typeof projectsData] : null;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!project) {
     return (

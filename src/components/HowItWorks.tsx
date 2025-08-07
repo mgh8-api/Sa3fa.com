@@ -4,14 +4,14 @@ const steps = [
   {
     icon: Lightbulb,
     title: 'Build',
-    description: 'We start with your vision and architect a solution using cutting-edge technology. From MVP to enterprise-scale applications.',
+    description: 'We start with your vision and architect a solution using cutting-edge technology. From MVP to enterprise App.',
     details: ['Requirements Analysis', 'Technical Architecture', 'MVP Development', 'User Testing'],
     color: 'primary'
   },
   {
     icon: Cog,
     title: 'Integrate',
-    description: 'Connect all your tools, automate workflows, and integrate with existing systems. Everything works together seamlessly.',
+    description: 'Connect all your tools, automate workflows, and integrate with existing systems. Everything works together.',
     details: ['API Integrations', 'Workflow Automation', 'System Connectivity', 'Data Synchronization'],
     color: 'accent'
   },
@@ -45,8 +45,7 @@ const HowItWorks = () => {
         </div>
 
         <div className="relative">
-          {/* Connection lines */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-accent to-success opacity-30" />
+          {/* Connection lines removed */}
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 relative z-10">
             {steps.map((step, index) => {

@@ -5,23 +5,23 @@ const projects = [{
   id: 'ecommerce-automation',
   title: 'E-commerce Automation Platform',
   description: 'Comprehensive SaaS solution featuring seamless store API integration, intelligent web scraping for competitive auditing, advanced inventory management, and automated customer service through WhatsApp integration.',
-  tech: ['Node.js', 'PostgreSQL', 'WhatsApp API', 'Web Scraping'],
+  tech: ['Node.js', 'PostgreSQL', 'WhatsApp API', 'Web Scraping', 'ERP Integration', 'AI', 'HTML'],
   features: ['Store API Integration', 'Competitive Auditing', 'Inventory Management'],
   status: 'Live',
   impact: '300% increase in order processing speed'
 }, {
   id: 'business-intelligence',
-  title: 'Business Intelligence Dashboard',
+  title: 'Business Intelligence',
   description: 'Advanced analytics platform with multi-vendor API integration, intelligent web scraping for non-API vendors, unified database architecture, WhatsApp automation, real-time dashboard monitoring, and custom AI for natural language querying.',
-  tech: ['React', 'PostgreSQL', 'WhatsApp API', 'Custom AI'],
+  tech: ['React', 'PostgreSQL', 'WhatsApp API', 'Custom AI', 'Live Dashboard', 'WEB crapping', 'Automated Auditing'],
   features: ['Multi-vendor Integration', 'Real-time Analytics', 'AI-Powered Queries'],
   status: 'Live',
   impact: '50% faster decision making'
 }, {
   id: 'hospital-management',
   title: 'Hospital Management SaaS',
-  description: 'Enterprise-grade healthcare management system designed to optimize hospital operations, streamline human resource management, and digitize asset tracking while eliminating paper-based processes through comprehensive computerization.',
-  tech: ['Node.js', 'PostgreSQL', 'Custom SaaS', 'Automation'],
+  description: 'Enterprise-grade healthcare management system designed to optimize hospital operations, and digitize asset tracking while eliminating paper-based processes through comprehensive computerization.',
+  tech: ['Node.js', 'PostgreSQL', 'Custom SaaS', 'Automation', 'ERP Integration', 'Live Dashboard', 'Load Balancing'],
   features: ['HR Management', 'Asset Tracking', 'Digital Workflow'],
   status: 'Deployed',
   impact: '100% digital transformation achieved'

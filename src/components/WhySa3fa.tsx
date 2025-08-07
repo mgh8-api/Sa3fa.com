@@ -41,79 +41,152 @@ const features = [
 
 const WhySa3fa = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,_rgba(59,130,246,0.15)_1px,_transparent_0)] bg-[size:50px_50px]" />
-      </div>
-
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16 scroll-reveal">
-          <h2 className="text-5xl font-bold mb-6">
-            Why <span className="glow-text">Sa3fa</span>?
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We're not just developers. We're technology partners who understand that great software 
-            is about solving real business problems, not just writing code.
-          </p>
+    <>
+      <section className="py-24 relative overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,_rgba(59,130,246,0.15)_1px,_transparent_0)] bg-[size:50px_50px]" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            
-            return (
-              <div
-                key={feature.title}
-                className="relative group scroll-reveal"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="glass-card p-8 h-full tech-border group-hover:scale-105 transition-all duration-300">
-                  {/* Glow effect on hover */}
-                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
-                  <div className="relative z-10">
-                    <div className="inline-flex p-4 rounded-lg bg-primary/20 border border-primary/30 text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <Icon className="w-8 h-8" />
-                    </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-16 scroll-reveal">
+            <h2 className="text-5xl font-bold mb-6">
+              Why <span className="glow-text">Sa3fa</span>?
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              We're not just developers. We're technology partners who understand that great software 
+              is about solving real business problems, not just writing code.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              
+              return (
+                <div
+                  key={feature.title}
+                  className="relative group scroll-reveal"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="glass-card p-8 h-full tech-border group-hover:scale-105 transition-all duration-300">
+                    {/* Glow effect on hover */}
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     
-                    <h3 className="text-xl font-bold mb-4 text-foreground">
-                      {feature.title}
-                    </h3>
-                    
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
-                      {feature.description}
-                    </p>
-                    
-                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-success/20 border border-success/30 text-success text-sm font-medium">
-                      <div className="w-2 h-2 rounded-full bg-success mr-2" />
-                      {feature.benefit}
+                    <div className="relative z-10">
+                      <div className="inline-flex p-4 rounded-lg bg-primary/20 border border-primary/30 text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <Icon className="w-8 h-8" />
+                      </div>
+                      
+                      <h3 className="text-xl font-bold mb-4 text-foreground">
+                        {feature.title}
+                      </h3>
+                      
+                      <p className="text-muted-foreground mb-6 leading-relaxed">
+                        {feature.description}
+                      </p>
+                      
+                      <div className="inline-flex items-center px-4 py-2 rounded-full bg-success/20 border border-success/30 text-success text-sm font-medium">
+                        <div className="w-2 h-2 rounded-full bg-success mr-2" />
+                        {feature.benefit}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
 
-        {/* Stats section */}
-        <div className="mt-20 scroll-reveal">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { number: '50+', label: 'Projects Delivered' },
-              { number: '100%', label: 'Client Satisfaction' },
-              { number: '24/7', label: 'Support Available' },
-              { number: '< 1 week', label: 'Average MVP Time' }
-            ].map((stat, index) => (
-              <div key={stat.label} className="text-center glass-card p-6 tech-border">
-                <div className="text-3xl font-bold glow-text mb-2">{stat.number}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
+          {/* Stats section */}
+          <div className="mt-20 scroll-reveal">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { number: '50+', label: 'Projects Delivered' },
+                { number: '100%', label: 'Client Satisfaction' },
+                { number: '24/7', label: 'Support Available' },
+                { number: '< 1 week', label: 'Average MVP Time' }
+              ].map((stat, index) => (
+                <div key={stat.label} className="text-center glass-card p-6 tech-border">
+                  <div className="text-3xl font-bold glow-text mb-2">{stat.number}</div>
+                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      {/* Team Section */}
+      <section id="team" className="py-24 relative overflow-hidden bg-background">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-16 scroll-reveal">
+            <h2 className="text-5xl font-bold mb-6">
+              Meet the <span className="glow-text">Team</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Our multidisciplinary team brings together expertise in automation, AI, security, full-stack development, and agile leadership to deliver exceptional results for our clients.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            {/* Team Member 1 */}
+            <div className="glass-card p-8 tech-border text-center group hover:scale-105 transition-all duration-300 scroll-reveal">
+              <div className="flex justify-center mb-6">
+                <img src="/photo1.png" alt="Mohammed Ghassan" className="w-24 h-24 rounded-full border-4 border-primary/30 object-cover shadow-lg" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-foreground">Mohammed Ghassan</h3>
+              <div className="text-primary text-sm font-medium mb-2">Team Leader</div>
+              <ul className="text-muted-foreground text-sm space-y-1 text-left mx-auto max-w-xs">
+                <li>• Automation Architect</li>
+                <li>• API Integration Specialist</li>
+                <li>• Security Expert</li>
+                <li>• Systems Administration Professional</li>
+              </ul>
+            </div>
+            {/* Team Member 2 */}
+            <div className="glass-card p-8 tech-border text-center group hover:scale-105 transition-all duration-300 scroll-reveal">
+              <div className="flex justify-center mb-6">
+                <img src="/photo2.png" alt="Yousif Alsaffer" className="w-24 h-24 rounded-full border-4 border-primary/30 object-cover shadow-lg" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-foreground">Yousif Alsaffer</h3>
+              <div className="text-primary text-sm font-medium mb-2">AI Specialist</div>
+              <ul className="text-muted-foreground text-sm space-y-1 text-left mx-auto max-w-xs">
+                <li>• Artificial Intelligence & LLM Expert</li>
+                <li>• Machine Learning Pipeline Builder</li>
+                <li>• Full-Stack Software Engineer</li>
+                <li>• Database Management Expert</li>
+              </ul>
+            </div>
+            {/* Team Member 3 */}
+            <div className="glass-card p-8 tech-border text-center group hover:scale-105 transition-all duration-300 scroll-reveal">
+              <div className="flex justify-center mb-6">
+                <img src="/photo3.png" alt="Mohammed Emad" className="w-24 h-24 rounded-full border-4 border-primary/30 object-cover shadow-lg" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-foreground">Mohammed Emad</h3>
+              <div className="text-primary text-sm font-medium mb-2">Software Engineer & Data Analyst</div>
+              <ul className="text-muted-foreground text-sm space-y-1 text-left mx-auto max-w-xs">
+                <li>• Senior Full-Stack Developer</li>
+                <li>• Frontend Optimization Expert</li>
+                <li>• Technical Documentation Specialist</li>
+                <li>• UI/UX Designer</li>
+              </ul>
+            </div>
+            {/* Team Member 4 */}
+            <div className="glass-card p-8 tech-border text-center group hover:scale-105 transition-all duration-300 scroll-reveal">
+              <div className="flex justify-center mb-6">
+                <img src="/photo4.png" alt="Ali Zaki" className="w-24 h-24 rounded-full border-4 border-primary/30 object-cover shadow-lg" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-foreground">Ali Zaki</h3>
+              <div className="text-primary text-sm font-medium mb-2">Scrum Master</div>
+              <ul className="text-muted-foreground text-sm space-y-1 text-left mx-auto max-w-xs">
+                <li>• Agile Project Facilitator</li>
+                <li>• Team Progress Leader</li>
+                <li>• Ensures Continuous Delivery</li>
+                <li>• Sprint Planning & Velocity Optimizer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
