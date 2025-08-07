@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer className="bg-background/50 backdrop-blur-lg border-t border-border/50 py-16">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Brand */}
-          <div className="lg:col-span-2">
+          <div>
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-primary to-accent flex items-center justify-center">
                 <Zap className="w-6 h-6 text-primary-foreground" />
@@ -33,30 +33,6 @@ const Footer = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-foreground">Services</h3>
-            <ul className="space-y-3">
-              {[
-                'Custom SaaS Development',
-                'Business Dashboards',
-                'WhatsApp Integration',
-                'Business Automation',
-                'Self-hosted Solutions',
-                'Security & Authentication',
-                'Live Dashboard',
-                'Custom Websites',
-                'Link Trackers'
-              ].map((service) => (
-                <li key={service}>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                    {service}
-                  </a>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Contact */}
