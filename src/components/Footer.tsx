@@ -1,4 +1,4 @@
-import { Mail, MessageSquare, MapPin, Zap, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MessageSquare, MapPin, Zap, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -20,14 +20,17 @@ const Footer = () => {
             </p>
             
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-primary hover:bg-primary/20 transition-colors">
-                <Github className="w-5 h-5" />
+              <a
+                href="https://instagram.com/sa3fa.iq"
+                className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-primary hover:bg-primary/20 transition-colors"
+              >
+                <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-primary hover:bg-primary/20 transition-colors">
+              <a
+                href="https://linkedin.com/company/sa3fa-ltd"
+                className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-primary hover:bg-primary/20 transition-colors"
+              >
                 <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-primary hover:bg-primary/20 transition-colors">
-                <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>
