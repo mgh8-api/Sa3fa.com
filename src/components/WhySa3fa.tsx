@@ -130,7 +130,7 @@ const WhySa3fa = () => {
             {/* Team Member 1 */}
             <div className="glass-card p-8 tech-border text-center group hover:scale-105 transition-all duration-300 scroll-reveal">
               <div className="flex justify-center mb-6">
-                <img src="/photo1.png" alt="Mohammed Ghassan" className="w-24 h-24 rounded-full border-4 border-primary/30 object-cover shadow-lg" />
+                <img src="/photo1.webp" alt="Mohammed Ghassan" className="w-24 h-24 rounded-full border-4 border-primary/30 object-cover shadow-lg" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-foreground">Mohammed Ghassan</h3>
               <div className="text-primary text-sm font-medium mb-2">Team Leader</div>
@@ -144,7 +144,7 @@ const WhySa3fa = () => {
             {/* Team Member 2 */}
             <div className="glass-card p-8 tech-border text-center group hover:scale-105 transition-all duration-300 scroll-reveal">
               <div className="flex justify-center mb-6">
-                <img src="/photo2.png" alt="Yousif Alsaffer" className="w-24 h-24 rounded-full border-4 border-primary/30 object-cover shadow-lg" />
+                <img src="/photo2.webp" alt="Yousif Alsaffer" className="w-24 h-24 rounded-full border-4 border-primary/30 object-cover shadow-lg" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-foreground">Yousif Alsaffer</h3>
               <div className="text-primary text-sm font-medium mb-2">AI Specialist</div>
@@ -158,7 +158,7 @@ const WhySa3fa = () => {
             {/* Team Member 3 */}
             <div className="glass-card p-8 tech-border text-center group hover:scale-105 transition-all duration-300 scroll-reveal">
               <div className="flex justify-center mb-6">
-                <img src="/photo3.png" alt="Mohammed Emad" className="w-24 h-24 rounded-full border-4 border-primary/30 object-cover shadow-lg" />
+                <img src="/photo3.webp" alt="Mohammed Emad" className="w-24 h-24 rounded-full border-4 border-primary/30 object-cover shadow-lg" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-foreground">Mohammed Emad</h3>
               <div className="text-primary text-sm font-medium mb-2">Software Engineer & Data Analyst</div>
@@ -172,7 +172,7 @@ const WhySa3fa = () => {
             {/* Team Member 4 */}
             <div className="glass-card p-8 tech-border text-center group hover:scale-105 transition-all duration-300 scroll-reveal">
               <div className="flex justify-center mb-6">
-                <img src="/photo4.png" alt="Ali Zaki" className="w-24 h-24 rounded-full border-4 border-primary/30 object-cover shadow-lg" />
+                <img src="/photo4.webp" alt="Ali Zaki" className="w-24 h-24 rounded-full border-4 border-primary/30 object-cover shadow-lg" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-foreground">Ali Zaki</h3>
               <div className="text-primary text-sm font-medium mb-2">Scrum Master</div>
