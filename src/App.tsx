@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import ProjectDetail from "./pages/ProjectDetail";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import WHFCustomGPTPrivacyPolicy from "./pages/WHFCustomGPTPrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/projects/:projectId" element={<ProjectDetail />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/whf-custom-gpt/" element={<WHFCustomGPTPrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
